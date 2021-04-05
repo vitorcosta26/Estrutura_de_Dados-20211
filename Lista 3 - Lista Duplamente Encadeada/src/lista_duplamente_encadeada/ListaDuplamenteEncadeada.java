@@ -74,17 +74,8 @@ public class ListaDuplamenteEncadeada<T> {
 	public T recupera(int posicao) {
 		try {
 			this.verificaPosicao(posicao);
-			Iterador<CelulaDupla> iterador = new Iterador<>(this.inicio);
-			int indice = 0;
-			while (iterador.hasNext()) {
-				if (indice != posicao) {
-					iterador.next();
-					indice ++;
-				} else {
-					break;
-				}
-			}
-			return (T) iterador.getAtual();
+			CelulaDupla celula = this.recuperaCelulaDupla(posicao);
+			return (T) celula.getElemento();
 		} catch (NullPointerException e) {
 			System.out.println("A lista está vazia!");
 			return null;
