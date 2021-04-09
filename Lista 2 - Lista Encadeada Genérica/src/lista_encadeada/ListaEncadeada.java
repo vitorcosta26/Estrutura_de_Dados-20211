@@ -115,7 +115,7 @@ public class ListaEncadeada<T> {
 	public void removeFim() {
 		try {
 			this.verificaPosicao(this.quantidadeElementos - 1);
-			this.fim = this.recuperaCelula(this.quantidadeElementos - 1);
+			this.fim = this.recuperaCelula(this.quantidadeElementos - 2);
 			this.fim.setProximo(null);
 			this.quantidadeElementos --;
 		} catch (NullPointerException e) {
