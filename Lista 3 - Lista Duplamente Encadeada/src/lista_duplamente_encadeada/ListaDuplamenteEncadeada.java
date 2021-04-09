@@ -51,7 +51,7 @@ public class ListaDuplamenteEncadeada<T> {
 			this.inicio = nova;
 			this.fim = nova;
 		} else {
-			this.fim.setProxima(this.fim);
+			nova.setAnterior(this.fim);
 			this.fim.setProxima(nova);
 			this.fim = nova;
 		}
@@ -119,7 +119,7 @@ public class ListaDuplamenteEncadeada<T> {
 	public void removeFim() {
 		try {
 			this.verificaPosicao(this.quantidadeElementos - 1);
-			this.fim = this.recuperaCelulaDupla(this.quantidadeElementos - 1);
+			this.fim = this.recuperaCelulaDupla(this.quantidadeElementos - 2);
 			this.fim.setProxima(null);
 			this.quantidadeElementos --;
 		} catch (NullPointerException e) {
