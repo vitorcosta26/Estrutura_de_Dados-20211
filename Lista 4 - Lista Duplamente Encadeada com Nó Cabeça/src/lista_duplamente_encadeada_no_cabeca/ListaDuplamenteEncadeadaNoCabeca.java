@@ -29,7 +29,7 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 				proxima.setAnterior(nova);
 				this.quantidadeElementos ++;
 			} catch (IndexOutOfBoundsException e) {
-				System.out.println("A posicao indicada n„o existe!\nA lista vai de 0 atÈ "+this.quantidadeElementos+".");
+				System.out.println("A posicao indicada n√£o existe!\nA lista vai de 0 at√© "+this.quantidadeElementos+".");
 			}
 		}
 	}
@@ -101,10 +101,10 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 			CelulaDupla celula = this.recuperaCelulaDupla(posicao);
 			return (T) celula.getElemento();
 		} catch (NullPointerException e) {
-			System.out.println("A lista est· vazia!");
+			System.out.println("A lista est√° vazia!");
 			return null;
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("A posicao indicada n„o existe!\nA lista vai de 0 atÈ "+this.quantidadeElementos+".");
+			System.out.println("A posicao indicada n√£o existe!\nA lista vai de 0 at√© "+this.quantidadeElementos+".");
 			return null;
 		}
 	}
@@ -123,9 +123,9 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 				proxima.setAnterior(anterior);
 				this.quantidadeElementos --;
 			} catch (NullPointerException e) {
-				System.out.println("A lista est· vazia!");
+				System.out.println("A lista est√° vazia!");
 			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("A posicao indicada n„o existe!\nA lista vai de 0 atÈ "+this.quantidadeElementos+".");
+				System.out.println("A posicao indicada n√£o existe!\nA lista vai de 0 at√© "+this.quantidadeElementos+".");
 			}
 		}
 	}
@@ -138,7 +138,7 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 			this.noCabeca.setProxima(this.inicio);
 			this.quantidadeElementos --;
 		} catch (NullPointerException e) {
-			System.out.println("A lista est· vazia!");
+			System.out.println("A lista est√° vazia!");
 		}
 	}
 	
@@ -150,7 +150,7 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 			this.noCabeca.setAnterior(this.fim);
 			this.quantidadeElementos --;
 		} catch (NullPointerException e) {
-			System.out.println("A lista est· vazia!");
+			System.out.println("A lista est√° vazia!");
 		}
 	}
 	
@@ -164,7 +164,7 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 		this.quantidadeElementos = 0;
 	}
 	
-	//MÈdtodos adicionais.
+	//M√©dtodos adicionais.
 	
 	@Override
 	public String toString() {
@@ -205,10 +205,10 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 			}
 			return iterador.getAtual();
 		} catch (NullPointerException e) {
-			System.out.println("A lista est· vazia!");
+			System.out.println("A lista est√° vazia!");
 			return null;
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("A posicao indicada n„o existe!\nA lista vai de 0 atÈ "+this.quantidadeElementos+".");
+			System.out.println("A posicao indicada n√£o existe!\nA lista vai de 0 at√© "+this.quantidadeElementos+".");
 			return null;
 		}
 	}
@@ -218,18 +218,18 @@ public class ListaDuplamenteEncadeadaNoCabeca<T> {
 			throw new NullPointerException("Lista vazia!");
 		}
 		if ((posicao < 0 || posicao > this.quantidadeElementos)){
-			throw new ArrayIndexOutOfBoundsException("PosiÁ„o Inv·lida!");
+			throw new ArrayIndexOutOfBoundsException("Posi√ß√£o Inv√°lida!");
 		}
 	}
 
 	private void verificaPosicaoAdicao(int posicao){
 		if ((posicao < 0 || posicao > this.quantidadeElementos)){
-			throw new ArrayIndexOutOfBoundsException("PosiÁ„o Inv·lida!");
+			throw new ArrayIndexOutOfBoundsException("Posi√ß√£o Inv√°lida!");
 		}
 	}
 	
 	public String imprimeNo() {
-		if (this.quantidadeElementos == 0) return "Lista v·zia!";
+		if (this.quantidadeElementos == 0) return "Lista vazia!";
 		String anterior = this.noCabeca.getAnterior().getElemento().toString();
 		String proxima = this.noCabeca.getProxima().getElemento().toString();
 		return "Anterior: "+anterior+"\nProxima: "+proxima;
