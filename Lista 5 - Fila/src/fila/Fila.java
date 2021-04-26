@@ -26,9 +26,9 @@ public class Fila<T> {
 	
 	public boolean existeDado(T elemento) {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A lista est√° vazia!");
 		} else {
-			return this.primeira == elemento;
+			return this.primeira.getElemento() == elemento;
 		}
 	}
 	
@@ -39,7 +39,7 @@ public class Fila<T> {
 	@SuppressWarnings("unchecked")
 	public T Recuperar() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A lista est√° vazia!");
 		} else {
 			return (T) this.primeira.getElemento();
 		}
@@ -48,7 +48,7 @@ public class Fila<T> {
 	public void Alterar(T elemento) {
 		Celula nova = new Celula(elemento);
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A lista est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira.setProximo(null);
 			this.primeira = nova;
@@ -63,7 +63,7 @@ public class Fila<T> {
 	
 	public void Remover() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A lista est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira = null;
 			this.ultima = null;
