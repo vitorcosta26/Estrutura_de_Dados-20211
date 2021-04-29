@@ -84,7 +84,9 @@ public class Fila<T> {
 		this.primeira = null;
 		this.quantidadeElementos = 0;
 	}
-
+	
+	// Métodos adicionais.
+	
 	@Override
 	public String toString() {
 		if (this.isEmpty()) return "[]";
