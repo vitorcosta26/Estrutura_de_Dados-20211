@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Deque<Pessoa> deque = new Deque<>();
-		System.out.println("Fila.\n"+deque);
+		System.out.println("Fila Deque.\n"+deque);
 		System.out.println("Tamnho: "+deque.tamanho());
 		System.out.println("Vazia: "+deque.isEmpty());
 		
