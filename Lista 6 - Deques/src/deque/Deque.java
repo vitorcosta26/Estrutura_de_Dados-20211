@@ -38,7 +38,7 @@ public class Deque<T> {
 	
 	public boolean existeDado(T elemento) {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A fila est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else {
 			Iterador<Object> iterador = new Iterador<Object>(this.primeira);
 			while (iterador.hasNext()) {
@@ -57,7 +57,7 @@ public class Deque<T> {
 	@SuppressWarnings("unchecked")
 	public T RecuperarInicio() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A fila est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else {
 			return (T) this.primeira.getElemento();
 		}
@@ -66,7 +66,7 @@ public class Deque<T> {
 	@SuppressWarnings("unchecked")
 	public T RecuperarFim() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A fila est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else {
 			return (T) this.ultima.getElemento();
 		}
@@ -75,7 +75,7 @@ public class Deque<T> {
 	public void AlterarInicio(T elemento) {
 		Celula nova = new Celula(elemento);
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira.setProximo(null);
 			this.primeira = nova;
@@ -91,7 +91,7 @@ public class Deque<T> {
 	public void AlterarFim(T elemento) {
 		Celula nova = new Celula(elemento);
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira.setProximo(null);
 			this.primeira = nova;
@@ -106,7 +106,7 @@ public class Deque<T> {
 	
 	public void RemoverInicio() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira = null;
 			this.ultima = null;
@@ -121,7 +121,7 @@ public class Deque<T> {
 	
 	public void RemoverFim() {
 		if (this.tamanho() == 0) {
-			throw new ArrayIndexOutOfBoundsException("A lista est· vazia!");
+			throw new ArrayIndexOutOfBoundsException("A fila est√° vazia!");
 		} else if (this.tamanho() == 1) {
 			this.primeira = null;
 			this.ultima = null;
@@ -142,7 +142,7 @@ public class Deque<T> {
 		this.quantidadeElementos = 0;
 	}
 	
-	// MÈtodos adicionais.
+	// M√©todos adicionais.
 	
 	@Override
 	public String toString() {
