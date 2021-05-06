@@ -39,7 +39,7 @@ public class Pilha<T> {
             throw new RuntimeException("A pilha está vazia!");
         }
         return (T) this.topo.getElemento();
-    }
+	}
 	
 	public void Pull(T elemento) {
 		this.Pop();
